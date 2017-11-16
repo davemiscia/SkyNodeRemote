@@ -35,7 +35,14 @@ public class MainActivity extends AppCompatActivity {
                 new MakeNetworkCall().execute("http://10.5.1.106/cpe_status.asp", "Get");
             }
 
-        
+        });
+
+        PostBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new MakeNetworkCall().execute("http://androidpala.com/" +
+                        "tutorial/http.php?post=1", "Post");
+            }
         });
 
 
